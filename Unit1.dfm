@@ -6,18 +6,6 @@ object MyForm: TMyForm
   ClientWidth = 555
   Color = clBtnFace
   CustomTitleBar.CaptionAlignment = taCenter
-  CustomTitleBar.BackgroundColor = 8804879
-  CustomTitleBar.ForegroundColor = clBlack
-  CustomTitleBar.InactiveBackgroundColor = 15461355
-  CustomTitleBar.InactiveForegroundColor = clBlack
-  CustomTitleBar.ButtonForegroundColor = clBlack
-  CustomTitleBar.ButtonBackgroundColor = 8804879
-  CustomTitleBar.ButtonHoverForegroundColor = clWhite
-  CustomTitleBar.ButtonHoverBackgroundColor = 11756854
-  CustomTitleBar.ButtonPressedForegroundColor = clWhite
-  CustomTitleBar.ButtonPressedBackgroundColor = 10051645
-  CustomTitleBar.ButtonInactiveForegroundColor = clBlack
-  CustomTitleBar.ButtonInactiveBackgroundColor = 15461355
   Constraints.MinHeight = 190
   Constraints.MinWidth = 335
   Font.Charset = DEFAULT_CHARSET
@@ -37,8 +25,6 @@ object MyForm: TMyForm
     Height = 282
     Anchors = [akLeft, akTop, akRight, akBottom]
     TabOrder = 0
-    ExplicitWidth = 537
-    ExplicitHeight = 329
   end
   object PrintString: TEdit
     Left = 8
@@ -47,8 +33,6 @@ object MyForm: TMyForm
     Height = 23
     Anchors = [akLeft, akRight, akBottom]
     TabOrder = 1
-    ExplicitTop = 347
-    ExplicitWidth = 505
   end
   object SelectionNumberString: TComboBox
     Left = 8
@@ -61,7 +45,6 @@ object MyForm: TMyForm
       #1055#1077#1088#1074#1072#1103
       #1042#1090#1086#1088#1072#1103
       #1058#1088#1077#1090#1100#1103)
-    ExplicitTop = 384
   end
   object StartSelection: TButton
     Left = 184

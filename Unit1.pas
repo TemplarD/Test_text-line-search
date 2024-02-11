@@ -55,7 +55,7 @@ var
   begin
     try
       begin
-      TextToSearch := AnsiLowerCase(TextEditor.Text);
+      TextToSearch := AnsiLowerCase(TextEditor.Text);  //приводим кирилический текст к нижнему регистру
       Count := 0;
         for i := 1 to Length(TextToSearch) do
           begin
