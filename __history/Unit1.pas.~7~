@@ -1,0 +1,59 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.StdCtrls, StrUtils;
+
+type
+  TMyForm = class(TForm)
+    TextEditor: TMemo;
+    PrintString: TEdit;
+    SelectionNumberString: TComboBox;
+    StartSelection: TButton;
+    SumB: TButton;
+    procedure StartSelectionClick(Sender: TObject);
+    procedure SumBClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  MyForm: TMyForm;
+
+implementation
+
+{$R *.dfm}
+
+procedure TMyForm.StartSelectionClick(Sender: TObject);
+var 
+  SelectionIndex: Integer; //хранение инедекса SelectionNumberString выбранного номера строки
+  begin
+  selectionIndex := SelectionNumberString.ItemIndex;
+    if (selectionIndex <> -1) and (SelectionNumberString.Text <> '') then
+      begin
+      PrintString.Text := TextEditor.Lines[selectionIndex];
+      end
+    else
+    ShowMessage('Параметр не выбран');
+  end;
+
+procedure TMyForm.SumBClick(Sender: TObject);
+var
+  Count: Integer;  // хранение числа вхождений в текст компонента TextEditor искомых символов.
+  TextToSearch: string; // хранение текста приведенного к нижнему регистру, для избежания дублирования логики при поиске символов
+  begin
+  TextToSearch := LowerCase(TextEditor.Text);
+  Count := 0;      
+    for i := 0 to lenght(TextToSearch) do
+      begin
+        if TextToSearch[i] = 'б' then
+        inc(Count);
+      end;
+  ShowMessage('Количество вхождений: ' + IntToStr(Count));
+  end;
+
+end.
